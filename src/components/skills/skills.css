@@ -1,0 +1,131 @@
+.skills__container {
+    display: grid;
+    grid-template-columns: repeat(2, 350px); /* Default layout for larger screens */
+    column-gap: 3rem;
+    justify-content: center;
+}
+
+.skills__content {
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2rem 4rem;
+    border-radius: 1.25rem;
+}
+
+.skills__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    text-align: center;
+    margin-bottom: var(--mb-1-5);
+}
+
+.skills__box {
+    display: flex;
+    justify-content: center;
+    column-gap: 2.5rem;
+}
+
+.skills__group {
+    display: grid;
+    align-items: flex-start;
+    row-gap: 1rem;
+}
+
+.skills__data {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.skills .bx-badge-check {
+    font-size: 1rem;
+    color: var(--title-color);
+}
+
+.skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    line-height: 18px;
+}
+
+.skills__level {
+    font-size: var(--tiny-font-size);
+}
+
+/* =============== BREAKPOINTS =============== */
+
+/* Large devices (up to 992px) */
+@media screen and (max-width: 992px) {
+    .skills__container {
+        grid-template-columns: repeat(2, 1fr); /* Shrink columns on large screens */
+        column-gap: 2rem;
+    }
+
+    .skills__content {
+        padding: 1.5rem 3rem; /* Reduce padding for large screens */
+    }
+}
+
+/* Medium devices (up to 768px) */
+@media screen and (max-width: 768px) {
+    .skills__container {
+        grid-template-columns: 1fr; /* Single column layout on medium screens */
+        row-gap: 2rem; /* Add gap between skill containers */
+    }
+
+    .skills__content {
+        padding: 1.5rem 2rem; /* Reduce padding for medium screens */
+    }
+
+    .skills__box {
+        flex-direction: column; /* Stack the content vertically */
+        row-gap: 1.5rem; /* Add gap between elements */
+    }
+
+    .skills__title {
+        font-size: calc(var(--normal-font-size) - 2px); /* Slightly reduce title size */
+    }
+}
+
+/* Small devices (up to 576px) */
+@media screen and (max-width: 576px) {
+    .skills__container {
+        grid-template-columns: 1fr; /* Ensure a single column on small screens */
+    }
+
+    .skills__content {
+        padding: 1rem 1.5rem; /* Further reduce padding on small screens */
+    }
+
+    .skills__box {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .skills__name {
+        font-size: calc(var(--normal-font-size) - 3px); /* Decrease font size */
+    }
+}
+
+/* Extra small devices (up to 400px) */
+@media screen and (max-width: 400px) {
+    .skills__content {
+        padding: 0.8rem 1rem; /* Minimize padding for very small screens */
+    }
+
+    .skills__box {
+        flex-direction: column;
+        row-gap: 0.8rem; /* Tighter gaps */
+    }
+
+    .skills__title {
+        font-size: calc(var(--normal-font-size) - 4px); /* Further reduce font size */
+    }
+
+    .skills__name {
+        font-size: calc(var(--normal-font-size) - 4px); /* Further reduce name size */
+    }
+
+    .skills__level {
+        font-size: calc(var(--tiny-font-size) - 2px); /* Adjust skill level font size */
+    }
+}
